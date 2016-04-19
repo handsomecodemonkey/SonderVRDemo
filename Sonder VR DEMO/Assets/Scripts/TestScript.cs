@@ -6,6 +6,7 @@ public class TestScript : MonoBehaviour {
 	[SerializeField] private VRInteractiveItem m_InteractiveItem;
 
 	private Vector3 originalScale;
+	private bool over;
 
 	// Use this for initialization
 	void Start () {
@@ -24,15 +25,27 @@ public class TestScript : MonoBehaviour {
 	//Handle the Over event
 	private void HandleOver()
 	{
-		transform.localScale = originalScale * 2;
+		//transform.localScale = originalScale * 2;
 		Debug.Log("Show over state");
+		over = true;
+		StartCoroutine (bodySwap ());
+
 	}
 
 	//Handle the Out Event
 	private void HandleOut()
 	{
-		transform.localScale = originalScale;
+		//transform.localScale = originalScale;
 		Debug.Log("Show out state");
+		over = false;
+		Camera.main.ResetFieldOfView ();
+	}
+
+	private IEnumerator bodySwap() {
+		while (Camera.main.fieldOfView > 1 && over) {
+			Camera.main.fieldOfView = Mathf.Lerp (Camera.main.fieldOfView, 0f, Time.deltaTime);
+			yield return new WaitForSeconds (0.0001f);
+		}
 	}
 
 }

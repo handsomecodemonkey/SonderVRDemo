@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/Intro_Scene.unity
+- path: Assets/_Scenes/Body_Swap_Kelsey.unity
   isLoaded: 1
   isActive: 1
