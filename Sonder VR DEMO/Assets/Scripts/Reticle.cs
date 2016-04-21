@@ -16,14 +16,16 @@ public class Reticle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		RaycastHit hit;
-		float distance;
+		float distance = 1;
 		if (Physics.Raycast (new Ray (m_Camera.transform.position, m_Camera.transform.rotation * Vector3.forward), out hit)) {
-			distance = hit.distance;
-		} else { distance = m_ReticleDefaultDistance; }
+			//distance = hit.distance;
+		} else {
+			//distance = m_Camera.farClipPlane * 0.95f; 
+		}
 			
 		transform.position = m_Camera.transform.position + m_Camera.transform.rotation * Vector3.forward * distance;
 		transform.LookAt (m_Camera.transform.position);
 		transform.Rotate (0.0f, 180.0f, 0.0f);
-		transform.localScale = originalScale * distance * 0.3f;
+		transform.localScale = originalScale * distance * 0.2f;
 	}
 }
