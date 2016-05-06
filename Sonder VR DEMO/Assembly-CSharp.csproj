@@ -46,10 +46,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraFunctions.cs" />
+     <Compile Include="Assets\Scripts\Common\BodyLanguageBinoculars.cs" />
+     <Compile Include="Assets\Scripts\Common\Reticle.cs" />
      <Compile Include="Assets\Scripts\Intro_Scene\ConfirmText.cs" />
      <Compile Include="Assets\Scripts\Intro_Scene\Intro_Spotlight.cs" />
-     <Compile Include="Assets\Scripts\Intro_Scene\TextBoxManagerScript.cs" />
-     <Compile Include="Assets\Scripts\Reticle.cs" />
      <Compile Include="Assets\Scripts\Splash_Screen\SplashController.cs" />
      <Compile Include="Assets\Scripts\TestScript.cs" />
      <Compile Include="Assets\Scripts\VRScripts\VREyeRayCaster.cs" />
