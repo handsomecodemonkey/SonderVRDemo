@@ -10,6 +10,9 @@ public class BodyLanguageBinoculars : VRInteractiveItem
 	private SpriteRenderer m_SpriteRenderer;
 	[SerializeField]private Sprite m_Sprite;
 
+	public static bool activated;
+	private bool over = false;
+
 	// Use this for initialization
 	void Start () {
 		this.OnOver += HandleOver;
@@ -21,18 +24,26 @@ public class BodyLanguageBinoculars : VRInteractiveItem
 
 	// Update is called once per frame
 	void Update () {
-
+		if (Input.GetButtonDown ("Fire3") && over) { //Press A Button
+			Debug.Log("Please put functionality here...");
+		}
 	}
 
 	//Handle the Over event
 	private void HandleOver()
 	{
-		m_SpriteRenderer.sprite = m_Sprite;
+		over = true;
+		if (activated) {
+			m_SpriteRenderer.sprite = m_Sprite;
+		}
 	}
 
 	//Handle the Out Event
 	private void HandleOut()
 	{
-		m_SpriteRenderer.sprite = m_defaultSprite;
+		over = false;
+		if (activated) {
+			m_SpriteRenderer.sprite = m_defaultSprite;
+		}
 	}
 }
