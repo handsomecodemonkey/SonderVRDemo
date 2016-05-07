@@ -13,6 +13,12 @@ public class BodyLanguageBinoculars : VRInteractiveItem
 	public static bool activated;
 	private bool over = false;
 
+	//Customize these settings for Body Language Binoculars Description
+	[SerializeField] private String m_NameText;
+	[SerializeField] private String m_Mood;
+	[SerializeField] private String m_BodyLanguage;
+	[SerializeField] private String m_FunFact;
+
 	// Use this for initialization
 	void Start () {
 		this.OnOver += HandleOver;
@@ -24,8 +30,14 @@ public class BodyLanguageBinoculars : VRInteractiveItem
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown ("Fire3") && over) { //Press A Button
-			Debug.Log("Please put functionality here...");
+		if (Input.GetButtonDown ("Fire3") && over && activated && BodyLanguageBinocularDescription.m_DescriptionText.Length == 0) { //Press X Button
+			BodyLanguageBinocularDescription.m_DescriptionText = ("Name: \t" + m_NameText + "\n" +
+			"Mood: \t" + m_Mood + "\n" +
+			"Body Language: \n" + m_BodyLanguage + "\n" +
+			"Fun Fact: " + m_FunFact);
+			
+		} else if (Input.GetButtonDown ("Fire3") && BodyLanguageBinocularDescription.m_DescriptionText.Length != 0) {
+			BodyLanguageBinocularDescription.m_DescriptionText = "";
 		}
 
 		if (activated && over) {

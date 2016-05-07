@@ -36,7 +36,7 @@ public class ConfirmText : MonoBehaviour {
 			case 4:
 				hiddenBinoculars.layer = 1;
 				break;
-			case 6:
+			case 5:
 				BodyLanguageBinoculars.activated = true; //Turns on the body language binoculars for the intro scene
 				hiddenBinoculars.layer = 8;
 				break;
@@ -51,7 +51,7 @@ public class ConfirmText : MonoBehaviour {
 			case 3:
 				hiddenBinoculars.layer = 8;
 				break;
-			case 5:
+			case 4:
 				BodyLanguageBinoculars.activated = false; 
 				break;
 			default:
