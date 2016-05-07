@@ -29,7 +29,7 @@ public class ConfirmText : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown("Fire1")) { //Fire1 Maps to the left mouse click or A button on controller by default
-			m_TextMesh.text = m_TextLines [++lineNumber];
+			m_TextMesh.text = m_TextLines [m_TextLines.Length == lineNumber+1 ? lineNumber : ++lineNumber];
 
 			switch (lineNumber)
 			{
@@ -48,7 +48,7 @@ public class ConfirmText : MonoBehaviour {
 			m_TextMesh.text = m_TextLines [lineNumber == 0 ? 0 : --lineNumber];
 			switch (lineNumber)
 			{
-			case 4:
+			case 3:
 				hiddenBinoculars.layer = 8;
 				break;
 			case 5:

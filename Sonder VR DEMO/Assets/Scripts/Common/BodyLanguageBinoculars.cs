@@ -27,23 +27,23 @@ public class BodyLanguageBinoculars : VRInteractiveItem
 		if (Input.GetButtonDown ("Fire3") && over) { //Press A Button
 			Debug.Log("Please put functionality here...");
 		}
+
+		if (activated && over) {
+			m_SpriteRenderer.sprite = m_Sprite;
+		} else {
+			m_SpriteRenderer.sprite = m_defaultSprite;
+		}
 	}
 
 	//Handle the Over event
 	private void HandleOver()
 	{
 		over = true;
-		if (activated) {
-			m_SpriteRenderer.sprite = m_Sprite;
-		}
 	}
 
 	//Handle the Out Event
 	private void HandleOut()
 	{
 		over = false;
-		if (activated) {
-			m_SpriteRenderer.sprite = m_defaultSprite;
-		}
 	}
 }
