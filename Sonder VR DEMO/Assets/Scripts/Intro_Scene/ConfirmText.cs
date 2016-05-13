@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class ConfirmText : MonoBehaviour {
@@ -6,12 +7,14 @@ public class ConfirmText : MonoBehaviour {
 	[SerializeField] private TextAsset m_TextFile;
 	[SerializeField] private string[] m_TextLines;
 	[SerializeField] private GameObject m_TextBox;
+	[SerializeField] private GameObject a_Button;
+	[SerializeField] private int m_LevelToLoad;
 	private TextMesh m_TextMesh;
 	private int lineNumber = 0;
 
 	private bool binoculars;
 
-	[SerializeField] GameObject hiddenBinoculars;
+	[SerializeField] private GameObject hiddenBinoculars;
 
 	// Use this for initialization
 	void Start () {
@@ -33,12 +36,19 @@ public class ConfirmText : MonoBehaviour {
 
 			switch (lineNumber)
 			{
-			case 4:
-				hiddenBinoculars.layer = 1;
+			case 1:
+				a_Button.layer = 8;
 				break;
 			case 5:
+				hiddenBinoculars.layer = 1;
+				break;
+			case 6:
 				BodyLanguageBinoculars.activated = true; //Turns on the body language binoculars for the intro scene
 				hiddenBinoculars.layer = 8;
+				break;
+			case 13:
+				Debug.Log ("Final Text");
+				SceneManager.LoadScene (m_LevelToLoad);
 				break;
 			default:
 				break;
@@ -48,10 +58,10 @@ public class ConfirmText : MonoBehaviour {
 			m_TextMesh.text = m_TextLines [lineNumber == 0 ? 0 : --lineNumber];
 			switch (lineNumber)
 			{
-			case 3:
+			case 4:
 				hiddenBinoculars.layer = 8;
 				break;
-			case 4:
+			case 5:
 				BodyLanguageBinoculars.activated = false; 
 				break;
 			default:
