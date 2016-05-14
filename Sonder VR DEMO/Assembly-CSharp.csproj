@@ -84,13 +84,14 @@
      <Compile Include="Assets\Imports\Fantasy SkyBox\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_DemoPlaySound.cs" />
      <Compile Include="Assets\Imports\Fantasy SkyBox\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_OpenOtherScene.cs" />
      <Compile Include="Assets\Imports\Fantasy SkyBox\GUI Animator\GUI Animator FREE\Demo Basic (CSharp)\Scripts\GUIAnimatorFREEDemo.cs" />
-     <Compile Include="Assets\MenuController.cs" />
      <Compile Include="Assets\Scripts\CameraFunctions.cs" />
      <Compile Include="Assets\Scripts\Common\BodyLanguageBinocularDescription.cs" />
      <Compile Include="Assets\Scripts\Common\BodyLanguageBinoculars.cs" />
      <Compile Include="Assets\Scripts\Common\Reticle.cs" />
      <Compile Include="Assets\Scripts\Intro_Scene\ConfirmText.cs" />
      <Compile Include="Assets\Scripts\Intro_Scene\Intro_Spotlight.cs" />
+     <Compile Include="Assets\Scripts\Main_Menu\MenuController.cs" />
+     <Compile Include="Assets\Scripts\Main_Menu\MenuSelection.cs" />
      <Compile Include="Assets\Scripts\Splash_Screen\SplashController.cs" />
      <Compile Include="Assets\Scripts\TestScript.cs" />
      <Compile Include="Assets\Scripts\VRScripts\VREyeRayCaster.cs" />
