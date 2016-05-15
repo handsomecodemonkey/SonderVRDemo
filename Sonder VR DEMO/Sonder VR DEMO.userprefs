@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Main_Menu\MenuSelection.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Quiz_Scene\Question.cs">
     <Files>
-      <File FileName="Assets\Scripts\Common\BodyLanguageBinoculars.cs" Line="33" Column="3" />
-      <File FileName="Assets\Scripts\Main_Menu\MenuSelection.cs" Line="34" Column="11" />
+      <File FileName="Assets\Scripts\Quiz_Scene\Question.cs" Line="17" Column="24" />
+      <File FileName="Assets\Scripts\Quiz_Scene\Quiz.cs" Line="25" Column="2" />
+      <File FileName="Assets\Scripts\Quiz_Scene\QuizController.cs" Line="106" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

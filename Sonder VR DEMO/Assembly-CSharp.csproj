@@ -92,6 +92,10 @@
      <Compile Include="Assets\Scripts\Intro_Scene\Intro_Spotlight.cs" />
      <Compile Include="Assets\Scripts\Main_Menu\MenuController.cs" />
      <Compile Include="Assets\Scripts\Main_Menu\MenuSelection.cs" />
+     <Compile Include="Assets\Scripts\Quiz_Scene\AnswerInteractive.cs" />
+     <Compile Include="Assets\Scripts\Quiz_Scene\Question.cs" />
+     <Compile Include="Assets\Scripts\Quiz_Scene\Quiz.cs" />
+     <Compile Include="Assets\Scripts\Quiz_Scene\QuizController.cs" />
      <Compile Include="Assets\Scripts\Splash_Screen\SplashController.cs" />
      <Compile Include="Assets\Scripts\TestScript.cs" />
      <Compile Include="Assets\Scripts\VRScripts\VREyeRayCaster.cs" />
