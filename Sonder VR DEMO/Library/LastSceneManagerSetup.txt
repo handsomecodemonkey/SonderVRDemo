@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/Quiz.unity
+- path: Assets/_Scenes/Comic_Scene.unity
   isLoaded: 1
   isActive: 1

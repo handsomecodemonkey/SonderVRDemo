@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,12 +11,16 @@ public class QuizController : MonoBehaviour {
 	//View Objects (Game objects in use)
 	[SerializeField]private Text QuestionText;
 	[SerializeField]private Image CorrectImage;
+	[SerializeField]private Image IncorrectImage;
 	[SerializeField]private Text Answer1Text;
 	[SerializeField]private Text Answer2Text;
 	[SerializeField]private Text Answer3Text;
 	[SerializeField]private Text Answer4Text;
+	[SerializeField]private Text ResultsText;
+	[SerializeField]private int m_SceneToOpen;
 
 	private Question m_CurrentQuestion;
+	private bool QuizOver = false;
 
 	// Use this for initialization
 	void Start () {
@@ -62,7 +67,7 @@ public class QuizController : MonoBehaviour {
 		questionFourAnswers.Add ("Remote");
 		questionFourAnswers.Add ("Binoculars");
 		questionFourAnswers.Add ("Volume Meter");
-		string questionFourCorrectAnswer = "Look at the speaker";
+		string questionFourCorrectAnswer = "Binoculars";
 
 		Question questionFour = new Question (questionFourText, questionFourAnswers, questionFourCorrectAnswer);
 
@@ -74,12 +79,15 @@ public class QuizController : MonoBehaviour {
 		m_Quiz.addQuestion (questionFour);
 
 		CorrectImage.enabled = false;
+		IncorrectImage.enabled = false;
 		NextQuestion ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (Input.GetButtonDown ("Fire1") && QuizOver == true) { //Press A Button
+			SceneManager.LoadScene (m_SceneToOpen);
+		}
 	}
 
 	private void NextQuestion(){
@@ -92,26 +100,50 @@ public class QuizController : MonoBehaviour {
 	}
 
 	public void EndQuiz(){
-		QuestionText.text = "Quiz is over";
-		//TODO show results
+		QuestionText.text = "";
+		Answer1Text.text = "";
+		Answer2Text.text = "";
+		Answer3Text.text = "";
+		Answer4Text.text = "";
+
+		//Show results
+		ResultsText.enabled = true;
+		ResultsText.text = m_Quiz.getResults () + "Press A to go back to menu";
+		QuizOver = true;
 	}
 
 	public void chooseAnswer(string answer){
 		if (answer == m_CurrentQuestion.getCorrectAnswer()) {
 			m_Quiz.m_NumCorrect++;
-
-			//Show Correct Ding
+			StartCoroutine (showCorrect());
 		} else {
 			m_Quiz.m_NumIncorrect++;
-
-			//Show Incorrect Bleh
+			StartCoroutine (showIncorrect());
 		}
+	}
 
+	private void advanceQuiz(){
 		if (m_Quiz.m_NumQuestionsLeft != 0) {
 			NextQuestion ();
 		} else {
 			EndQuiz ();
 		}
+	}
+
+	private IEnumerator showCorrect(){
+		CorrectImage.enabled = true;
+		CorrectImage.GetComponent<AudioSource> ().Play ();
+		yield return new WaitForSeconds (1F);
+		CorrectImage.enabled = false;
+		advanceQuiz ();
+	}
+
+	private IEnumerator showIncorrect(){
+		IncorrectImage.enabled = true;
+		IncorrectImage.GetComponent<AudioSource> ().Play ();
+		yield return new WaitForSeconds (1F);
+		IncorrectImage.enabled = false;
+		advanceQuiz ();
 	}
 
 }

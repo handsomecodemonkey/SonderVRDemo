@@ -29,7 +29,7 @@ public class Quiz {
 		m_NumQuestionsLeft--;
 		return returnQuestion;
 	}
-
+		
 	public Question getRandomQuestion(){ //Returns a random question
 		//Get random index from 0 till range of questions
 		Random rand = new Random();
@@ -43,12 +43,17 @@ public class Quiz {
 		m_NumQuestionsLeft--;
 		return returnQuestion;
 	}
-
+		
 	//These functions below are used for analytics later
 	public void exportResults(){
+		//Export the results to data center or whatever that creates a report with data visualizations
 	}
 
-	public void printResults(){
+	public string getResults(){
+		float percentage = (float)m_NumCorrect / (float)m_TotalNumQuestions * 100;
+		return "Results\n" +
+		m_NumCorrect + "/" + m_TotalNumQuestions + " correct\n" +
+		percentage + "%\n";
 	}
 
 }
