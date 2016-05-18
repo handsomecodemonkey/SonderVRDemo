@@ -111,6 +111,9 @@
      <Compile Include="Assets\Scripts\Common\BodyLanguageBinoculars.cs" />
      <Compile Include="Assets\Scripts\Common\Reticle.cs" />
      <Compile Include="Assets\Scripts\Common\VREnabler.cs" />
+     <Compile Include="Assets\Scripts\First_Person\PopulationController.cs" />
+     <Compile Include="Assets\Scripts\First_Person\RandomWalk.cs" />
+     <Compile Include="Assets\Scripts\First_Person\WaterFountainScripts.cs" />
      <Compile Include="Assets\Scripts\Intro_Scene\ConfirmText.cs" />
      <Compile Include="Assets\Scripts\Intro_Scene\Intro_Spotlight.cs" />
      <Compile Include="Assets\Scripts\Main_Menu\MenuController.cs" />
@@ -123,20 +126,25 @@
      <Compile Include="Assets\Scripts\TestScript.cs" />
      <Compile Include="Assets\Scripts\VRScripts\VREyeRayCaster.cs" />
      <Compile Include="Assets\Scripts\VRScripts\VRInteractiveItem.cs" />
-     <Compile Include="Assets\Scripts\WaterFountainScripts.cs" />
      <None Include="Assets\Imports\Cute_kitten\Kitten\Shaders\Normal-Diffuse.shader" />
+     <None Include="Assets\Imports\High School_Model\Nerd\Nerd_Animation_Frame.txt" />
      <None Include="Assets\Imports\Fantasy SkyBox\Fantasy Skybox FREE\Readme.txt" />
+     <None Include="Assets\Imports\Mall\readme.txt" />
      <None Include="Assets\Imports\Wood texture floor_01\readme.txt" />
      <None Include="Assets\Imports\Cute_kitten\Kitten\Shaders\Alpha-Diffuse.shader" />
+     <None Include="Assets\Imports\High School_Model\Dog\Dog_Animation_Frame.txt" />
      <None Include="Assets\Imports\Fantasy SkyBox\Fantasy Skybox FREE\Fog and Ambient reference.txt" />
      <None Include="Assets\Imports\Panoply\SampleScene\WalterTurncoat\LICENSE.txt" />
      <None Include="Assets\Text\Intro_Scene\intro_scene_script.txt" />
+     <None Include="Assets\Imports\High School_Model\CoolBoy\CoolBoy_Animation_Frame.txt" />
      <None Include="Assets\Imports\Panoply\SampleScene\Audio\Sounds.txt" />
      <None Include="Assets\Fonts\LICENSE.txt" />
      <None Include="Assets\Imports\Fantasy SkyBox\GUI Animator\GUI Animator FREE\Readme.txt" />
      <None Include="Assets\Imports\Panoply\-Readme.txt" />
      <None Include="Assets\Imports\Fantasy SkyBox\GE Common Assets\Readme.txt" />
      <None Include="Assets\Imports\Fantasy SkyBox\GUI Animator\GUI Animator FREE\!How to.txt" />
+     <None Include="Assets\Imports\High School_Model\Sexy\Nerd_Animation_Frame.txt" />
+     <None Include="Assets\Imports\High School_Model\Fat\Fat_Animation_Frame.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

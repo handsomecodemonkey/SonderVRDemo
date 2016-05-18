@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 using Opertoon.Panoply;
-
+using UnityEngine.SceneManagement;
 /**
  * The PanoplyController class handles user input globally.
  * Copyright © Erik Loyer
@@ -351,7 +351,7 @@ namespace Opertoon.Panoply {
 				PanoplyCore.interpolatedStep = Mathf.Clamp(PanoplyCore.interpolatedStep, 0, PanoplyCore.scene.stepCount - 1);
 			}
 	    	
-			if ( Input.GetKeyDown( "left" ) || Input.GetButtonDown("Fire2")) {
+			if ( Input.GetKeyDown( "left" )) {
 	    		PanoplyCore.DecrementStep( ignoreStepCount );
 			} else if ( Input.GetKeyDown( "right" ) || Input.GetButtonDown("Fire1")) {
 				PanoplyCore.IncrementStep( ignoreStepCount );
@@ -365,6 +365,10 @@ namespace Opertoon.Panoply {
 	    		}
 	    	}
 	    	
+			if (Input.GetButtonDown ("Fire3")) { //X button
+				SceneManager.LoadScene (2);
+			}
+
 	    	// No input; head for target step
 	    	if ( !gotInput ) {
 	    		PanoplyCore.interpolatedStep = Mathf.Lerp( PanoplyCore.interpolatedStep,  ( float )PanoplyCore.targetStep, Time.deltaTime * gestureRate);

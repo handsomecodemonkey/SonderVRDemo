@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Common\VREnabler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Imports\Panoply\Core\PanoplyController.cs">
     <Files>
-      <File FileName="Assets\Scripts\Common\Reticle.cs" Line="15" Column="2" />
-      <File FileName="Assets\Scripts\Common\VREnabler.cs" Line="14" Column="2" />
+      <File FileName="Assets\Imports\Panoply\Core\PanoplyController.cs" Line="369" Column="32" />
+      <File FileName="Assets\Scripts\Main_Menu\MenuSelection.cs" Line="31" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

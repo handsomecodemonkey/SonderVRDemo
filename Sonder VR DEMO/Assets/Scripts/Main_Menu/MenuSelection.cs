@@ -26,7 +26,7 @@ public class MenuSelection : VRInteractiveItem {
 	
 	// Update is called once per frame
 	void Update () {
-
+		Debug.Log (over);
 		if (Input.GetButtonDown ("Fire1") && over) { //Press A Button
 			SceneManager.LoadScene (m_SceneToOpen);
 		}
@@ -36,6 +36,7 @@ public class MenuSelection : VRInteractiveItem {
 	//Handle the Over event
 	private void HandleOver()
 	{
+		Debug.Log ("voer");
 		over = true;
 		m_SpriteRenderer.sprite = m_Sprite;
 		m_MenuBackground.color = Color.white;
