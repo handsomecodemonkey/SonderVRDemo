@@ -111,6 +111,10 @@
      <Compile Include="Assets\Scripts\Common\BodyLanguageBinoculars.cs" />
      <Compile Include="Assets\Scripts\Common\Reticle.cs" />
      <Compile Include="Assets\Scripts\Common\VREnabler.cs" />
+     <Compile Include="Assets\Scripts\First_Person\DialogueChoice.cs" />
+     <Compile Include="Assets\Scripts\First_Person\FirstPersonBodyLanguageBinoculars.cs" />
+     <Compile Include="Assets\Scripts\First_Person\FirstPersonBradSceneController.cs" />
+     <Compile Include="Assets\Scripts\First_Person\KelseyBehavior.cs" />
      <Compile Include="Assets\Scripts\First_Person\PopulationController.cs" />
      <Compile Include="Assets\Scripts\First_Person\RandomWalk.cs" />
      <Compile Include="Assets\Scripts\First_Person\WaterFountainScripts.cs" />
