@@ -1,0 +1,11 @@
+Idle			0-60
+Run			110-134
+TakeDamage		190-213
+Stun			270-314
+Attack			370-392
+Idle_Holding		440-500
+Run_Holding		550-574
+Throw			630-650
+Lost			700-724
+Win			770-805
+Attack_Bat		860-889

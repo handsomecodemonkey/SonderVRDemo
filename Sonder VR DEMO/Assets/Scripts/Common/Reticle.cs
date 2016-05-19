@@ -10,7 +10,7 @@ public class Reticle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		originalScale = transform.localScale;
+		GetOriginalScale ();
 	}
 	
 	// Update is called once per frame
@@ -27,5 +27,14 @@ public class Reticle : MonoBehaviour {
 		transform.LookAt (m_Camera.transform.position);
 		transform.Rotate (0.0f, 180.0f, 0.0f);
 		transform.localScale = originalScale * distance * 0.2f;
+	}
+
+	public void GetOriginalScale(){
+		originalScale = transform.localScale;
+	}
+
+	public void changeCamera(Camera newCamera){
+		m_Camera = newCamera;
+		GetOriginalScale ();
 	}
 }

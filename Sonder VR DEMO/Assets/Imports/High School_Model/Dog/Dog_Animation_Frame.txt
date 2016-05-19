@@ -1,0 +1,4 @@
+Idle			0-30
+Attack			80-105
+TakeDamage		150-170
+Chabu			220-260
