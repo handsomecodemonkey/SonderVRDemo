@@ -351,7 +351,7 @@ namespace Opertoon.Panoply {
 				PanoplyCore.interpolatedStep = Mathf.Clamp(PanoplyCore.interpolatedStep, 0, PanoplyCore.scene.stepCount - 1);
 			}
 	    	
-			if ( Input.GetKeyDown( "left" )) {
+			if ( Input.GetKeyDown( "left" ) || Input.GetButtonDown("Fire2")) {
 	    		PanoplyCore.DecrementStep( ignoreStepCount );
 			} else if ( Input.GetKeyDown( "right" ) || Input.GetButtonDown("Fire1")) {
 				PanoplyCore.IncrementStep( ignoreStepCount );

@@ -3,6 +3,38 @@ guid: 1d647cdc7c3a02e40bf59d65e2ea9ff9
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: Camera
+    100002: Mesh
+    100004: Mesh 1
+    100006: Mesh 2
+    100008: Mesh 3
+    100010: Mesh 4
+    100012: Mesh 5
+    100014: Mesh 6
+    100016: //RootNode
+    400000: Camera
+    400002: Mesh
+    400004: Mesh 1
+    400006: Mesh 2
+    400008: Mesh 3
+    400010: Mesh 4
+    400012: Mesh 5
+    400014: Mesh 6
+    400016: //RootNode
+    2300000: Mesh
+    2300002: Mesh 1
+    2300004: Mesh 2
+    2300006: Mesh 3
+    2300008: Mesh 4
+    2300010: Mesh 5
+    2300012: Mesh 6
+    3300000: Mesh
+    3300002: Mesh 1
+    3300004: Mesh 2
+    3300006: Mesh 3
+    3300008: Mesh 4
+    3300010: Mesh 5
+    3300012: Mesh 6
     4300000: Mesh
     4300002: Mesh
     4300004: Mesh
@@ -10,6 +42,7 @@ ModelImporter:
     4300008: Mesh
     4300010: Mesh
     4300012: Mesh
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 2
