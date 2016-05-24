@@ -307,7 +307,7 @@ namespace Opertoon.Panoply {
 							}
 							
 						} else {
-							
+							source.Stop ();	
 						}
 						
 					}
